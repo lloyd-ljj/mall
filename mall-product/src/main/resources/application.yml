@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    username: root
+    password: lianlianjie
+    url: jdbc:mysql://127.0.0.1/mall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#    alicloud:
+#      access-key: LTAI4GCWmCLyxkhgu4Z5w5Wh
+#      secret-key: laTcVNIoqDcE8JNIw5SJhSsKob0etw
+#      oss:
+#        endpoint: oss-cn-shanghai.aliyuncs.com
+
+
+server:
+  port: 10000
+
+logging:
+  level:
+    cn.edu.shu.mall:  debug
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+#      全局逻辑删除规则
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
