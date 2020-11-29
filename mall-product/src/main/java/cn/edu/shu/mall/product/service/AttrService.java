@@ -1,9 +1,14 @@
 package cn.edu.shu.mall.product.service;
 
+import cn.edu.shu.mall.product.vo.AttrGroupRelationVo;
+import cn.edu.shu.mall.product.vo.AttrGroupWithAttrsVo;
+import cn.edu.shu.mall.product.vo.AttrRespVo;
+import cn.edu.shu.mall.product.vo.AttrVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import cn.edu.shu.common.utils.PageUtils;
 import cn.edu.shu.mall.product.entity.AttrEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +21,19 @@ import java.util.Map;
 public interface AttrService extends IService<AttrEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    void saveAttr(AttrVo attr);
+
+    PageUtils queryBaseAttrPage(Map<String, Object> params, Long catelogId, String type);
+
+    AttrRespVo getAttrInfo(Long attrId);
+
+    void updateAttr(AttrVo attr);
+
+    List<AttrEntity> getRelationAttr(Long attrgroupId);
+
+    void deleteRelation(AttrGroupRelationVo[] vos);
+
+    PageUtils getNoRelationAttr(Map<String, Object> params, Long attrgroupId);
 }
 

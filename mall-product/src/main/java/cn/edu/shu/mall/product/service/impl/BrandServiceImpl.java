@@ -1,7 +1,6 @@
 package cn.edu.shu.mall.product.service.impl;
 
 import cn.edu.shu.mall.product.service.CategoryBrandRelationService;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Map;
@@ -15,6 +14,7 @@ import cn.edu.shu.mall.product.dao.BrandDao;
 import cn.edu.shu.mall.product.entity.BrandEntity;
 import cn.edu.shu.mall.product.service.BrandService;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 
 @Service("brandService")
@@ -28,7 +28,7 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
         //1、获取key
         String key = (String) params.get("key");
         QueryWrapper<BrandEntity> queryWrapper = new QueryWrapper<>();
-        if(!StringUtils.isEmpty(key)){
+        if(!org.springframework.util.StringUtils.isEmpty(key)){
             queryWrapper.eq("brand_id",key).or().like("name",key);
         }
 
@@ -53,5 +53,4 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
             //TODO 更新其他关联
         }
     }
-
 }
