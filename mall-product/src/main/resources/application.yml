@@ -8,9 +8,19 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  redis:
+    host: 192.168.77.130
+    port: 6379
+
+  thymeleaf:
+    cache: false
+
 #    alicloud:
-#      access-key: LTAI4GCWmCLyxkhgu4Z5w5Wh
-#      secret-key: laTcVNIoqDcE8JNIw5SJhSsKob0etw
+#      access-key:
+#      secret-key:
 #      oss:
 #        endpoint: oss-cn-shanghai.aliyuncs.com
 
