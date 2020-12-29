@@ -12,6 +12,7 @@ import cn.edu.shu.mall.product.vo.SeckillSkuVo;
 import cn.edu.shu.mall.product.vo.SkuItemSaleAttrVo;
 import cn.edu.shu.mall.product.vo.SkuItemVo;
 import cn.edu.shu.mall.product.vo.SpuItemAttrGroupVo;
+import com.alibaba.fastjson.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

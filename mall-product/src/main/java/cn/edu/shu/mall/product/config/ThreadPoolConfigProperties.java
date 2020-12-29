@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
-@ConfigurationProperties(prefix = "gulimall.thread")
+@ConfigurationProperties(prefix = "mall.thread")
 // @Component
 @Data
 public class ThreadPoolConfigProperties {

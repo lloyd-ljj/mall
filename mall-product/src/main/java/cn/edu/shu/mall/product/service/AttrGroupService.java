@@ -1,6 +1,7 @@
 package cn.edu.shu.mall.product.service;
 
 import cn.edu.shu.mall.product.vo.AttrGroupWithAttrsVo;
+import cn.edu.shu.mall.product.vo.SpuItemAttrGroupVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import cn.edu.shu.common.utils.PageUtils;
 import cn.edu.shu.mall.product.entity.AttrGroupEntity;
@@ -24,5 +25,8 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
 
 
     List<AttrGroupWithAttrsVo> getAttrGroupWithAttrsByCatelogId(Long catelogId);
+
+    List<SpuItemAttrGroupVo> getAttrGroupWithAttrsBySpuId(Long spuId, Long catalogId);
+
 }
 

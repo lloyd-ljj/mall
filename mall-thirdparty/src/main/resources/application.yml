@@ -4,12 +4,18 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
     alicloud:
-      access-key: LTAI4GCWmCLyxkhgu4Z5w5Wh
-      secret-key: laTcVNIoqDcE8JNIw5SJhSsKob0etw
+      access-key:
+      secret-key:
       oss:
         endpoint: oss-cn-shanghai.aliyuncs.com
         bucket: mall-ljj
 
+      sms:
+        host: https://fesms.market.alicloudapi.com
+        path: /sms/
+        skin: 1
+        sign: 175622
+        appcode:
   application:
     name: mall-thirdparty
 
